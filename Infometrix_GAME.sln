@@ -1,14 +1,30 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-
+Project("{96E1585F-3EDB-08BD-7030-35C9402B92FE}") = "Infometrix_GAME", "Assembly-CSharp-firstpass.csproj", "{27B64AD7-D3F4-AFB3-D59D-995104FCD5C0}"
+EndProject
+Project("{96E1585F-3EDB-08BD-7030-35C9402B92FE}") = "Infometrix_GAME", "Assembly-CSharp.csproj", "{A47DAA3B-49D5-346D-5D2B-39076014DC0C}"
+EndProject
+Project("{96E1585F-3EDB-08BD-7030-35C9402B92FE}") = "Infometrix_GAME", "Assembly-CSharp-Editor-firstpass.csproj", "{396E95B9-4BD1-1AEE-E7C5-DC5C8B810876}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-
+		{27B64AD7-D3F4-AFB3-D59D-995104FCD5C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27B64AD7-D3F4-AFB3-D59D-995104FCD5C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27B64AD7-D3F4-AFB3-D59D-995104FCD5C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27B64AD7-D3F4-AFB3-D59D-995104FCD5C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A47DAA3B-49D5-346D-5D2B-39076014DC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A47DAA3B-49D5-346D-5D2B-39076014DC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A47DAA3B-49D5-346D-5D2B-39076014DC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A47DAA3B-49D5-346D-5D2B-39076014DC0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{396E95B9-4BD1-1AEE-E7C5-DC5C8B810876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{396E95B9-4BD1-1AEE-E7C5-DC5C8B810876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{396E95B9-4BD1-1AEE-E7C5-DC5C8B810876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{396E95B9-4BD1-1AEE-E7C5-DC5C8B810876}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
