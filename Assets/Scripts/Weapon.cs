@@ -17,17 +17,35 @@ public class Weapon : MonoBehaviour
     
     public ParticleSystem muzzleFlash;
     public GameObject impactPrefab;
+    public AudioSource audioSource;
 
     GameObject[] impacts;
     int currentImpact = 0;
     int maxImpacts = 5;
+
+    public AudioClip[] WeaponSounds; // 0-fire 1-reload 2-out of amo
+
+    public Animator anim;
+
+
 
     
 
 
     void Start()
     {
+        WeaponSounds = new AudioClip[3];
         impacts = new GameObject[maxImpacts];
+
+
+        audioSource = GetComponent<AudioSource>();
+        for(int i=0;i<3;i++)
+        {
+            WeaponSounds[i] = new AudioClip();
+        }
+        anim = GetComponent<Animator>();
+
+
         for(int i = 0; i< maxImpacts;i++)
         {
             impacts[i] = (GameObject)Instantiate(impactPrefab);
@@ -41,9 +59,7 @@ public class Weapon : MonoBehaviour
 
         if (Input.GetMouseButton(0) && !Input.GetKey(KeyCode.LeftShift))
         {
-            Fire();
-           // muzzleFlash.Play();
-           
+            Fire(); 
         }
         else if (Input.GetKey(KeyCode.R))
         {
@@ -58,13 +74,21 @@ public class Weapon : MonoBehaviour
     public void Fire()
     {
         if (fireTimer < fireRate) return;
+        muzzleFlash.Stop();
+        muzzleFlash.Play();
+
+     
+        audioSource.Play();
+       
+        
 
         RaycastHit hit;
         if (Physics.Raycast(transform.position,transform.forward, out hit, range))
         {
             impacts[currentImpact].transform.position = hit.point;
-          //  impacts[currentImpact].GetComponent<ParticleSystem>().Play();
-           Debug.Log("You hit " + hit.ToString());
+             impacts[currentImpact].GetComponent<ParticleSystem>().Play();
+           
+    //         Debug.Log("You hit " + hit.ToString());
            
             if (currentImpact+1 >= maxImpacts) currentImpact = 0;
         }
